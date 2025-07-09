@@ -60,7 +60,7 @@ The **Bill Reader App** aims to make it easy for anyone to scan a printed bill u
 ## 📸 Screenshots
 
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/f9e4c3f7-991c-4b89-a48b-db89fd3f5959" width="220"/>
+  <img src="https://github.com/user-attachments/assets/d6c7a221-54b8-47dc-b8c3-98923fb3bdf2" width="220"/>
   <img src="https://github.com/user-attachments/assets/1feacd0b-3e45-4234-bf24-a9e2d66a6fa2" width="220"/>
   <img src="https://github.com/user-attachments/assets/4b39d17f-facf-4b1d-ad31-d0a00a9cc7ac" width="220"/>
   <img src="https://github.com/user-attachments/assets/a736ddad-393a-44fb-ba2d-7694036af644" width="220"/>
