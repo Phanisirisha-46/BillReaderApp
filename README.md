@@ -56,13 +56,18 @@ The **Bill Reader App** aims to make it easy for anyone to scan a printed bill u
 
 ---
 
+
 ## 📸 Screenshots
-![WhatsApp Image 2025-07-09 at 23 33 19_6d9744a8](https://github.com/user-attachments/assets/f9e4c3f7-991c-4b89-a48b-db89fd3f5959)
-![WhatsApp Image 2025-07-09 at 23 33 19_bfc3de3a](https://github.com/user-attachments/assets/1feacd0b-3e45-4234-bf24-a9e2d66a6fa2)
-![WhatsApp Image 2025-07-09 at 23 33 19_d9965e44](https://github.com/user-attachments/assets/4b39d17f-facf-4b1d-ad31-d0a00a9cc7ac)
-![WhatsApp Image 2025-07-09 at 23 33 18_cb04f1af](https://github.com/user-attachments/assets/a736ddad-393a-44fb-ba2d-7694036af644)
-![WhatsApp Image 2025-07-09 at 23 33 07_a9f9e422](https://github.com/user-attachments/assets/56e12089-5520-4ea4-97de-e3c6b0304899)
-![WhatsApp Image 2025-07-09 at 23 33 07_0f57731f](https://github.com/user-attachments/assets/7b5cbc7c-cc6f-47e3-b1a3-8c8e06741a56)
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f9e4c3f7-991c-4b89-a48b-db89fd3f5959" width="150"/>
+  <img src="https://github.com/user-attachments/assets/1feacd0b-3e45-4234-bf24-a9e2d66a6fa2" width="150"/>
+  <img src="https://github.com/user-attachments/assets/4b39d17f-facf-4b1d-ad31-d0a00a9cc7ac" width="150"/>
+  <img src="https://github.com/user-attachments/assets/a736ddad-393a-44fb-ba2d-7694036af644" width="150"/>
+  <img src="https://github.com/user-attachments/assets/56e12089-5520-4ea4-97de-e3c6b0304899" width="150"/>
+</p>
+
+
 
 
 
