@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
         tts = new TextToSpeech(this, status -> {
             if (status != TextToSpeech.ERROR) {
-                tts.setLanguage(new Locale("te", "IN")); // Telugu
+                tts.setLanguage(new Locale("te", "IN")); 
             }
         });
     }
