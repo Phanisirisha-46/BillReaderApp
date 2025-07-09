@@ -60,18 +60,13 @@ The **Bill Reader App** aims to make it easy for anyone to scan a printed bill u
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f9e4c3f7-991c-4b89-a48b-db89fd3f5959" width="150"/>
-  <img src="https://github.com/user-attachments/assets/1feacd0b-3e45-4234-bf24-a9e2d66a6fa2" width="150"/>
+  <img src="https://github.com/user-attachments/assets/f9e4c3f7-991c-4b89-a48b-db89fd3f5959" width="250"/>
+  <img src="https://github.com/user-attachments/assets/1feacd0b-3e45-4234-bf24-a9e2d66a6fa2" width="250"/>
+  <img src="https://github.com/user-attachments/assets/4b39d17f-facf-4b1d-ad31-d0a00a9cc7ac" width="250"/>
+  <img src="https://github.com/user-attachments/assets/a736ddad-393a-44fb-ba2d-7694036af644" width="250"/>
 </p>
+![WhatsApp Image 2025-07-09 at 23 33 07_5dcbfa3b](https://github.com/user-attachments/assets/e9a3b5a2-e163-425b-a541-99b2db296572)
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/4b39d17f-facf-4b1d-ad31-d0a00a9cc7ac" width="150"/>
-  <img src="https://github.com/user-attachments/assets/a736ddad-393a-44fb-ba2d-7694036af644" width="150"/>
-</p>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/56e12089-5520-4ea4-97de-e3c6b0304899" width="150"/>
-</p>
 
 
 
