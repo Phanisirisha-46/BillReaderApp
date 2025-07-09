@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "360491754325",
+    "project_id": "billreader-6ba2d",
+    "storage_bucket": "billreader-6ba2d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360491754325:android:918baeabeb258c47c605dc",
+        "android_client_info": {
+          "package_name": "com.example.billreaderapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChypQDp-sLcZv9-TQzZ4ung6ZmgVJKcZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
