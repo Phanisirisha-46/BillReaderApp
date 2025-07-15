@@ -72,7 +72,7 @@ The **Bill Reader App** makes it easy for anyone to scan a bill (using the camer
    <img src="https://github.com/user-attachments/assets/327576c9-074a-4755-ac84-1cc606a9fdd6" width="220"/>
    <img src="https://github.com/user-attachments/assets/9a82c344-83c4-41ca-ac6f-612330c636d1" width="220"/>
   <img src="https://github.com/user-attachments/assets/750e8821-81d9-418b-905e-d8145b6158cd" width="220"/>
-  <img src="https://github.com/user-attachments/assets/d187fc34-6ac9-4e7c-95fc-4719c7b54cc4" />
+  <img src="https://github.com/user-attachments/assets/23f0c962-c0d5-46ce-80a8-cbf353a44598"/>
 </p>
 
 ---
