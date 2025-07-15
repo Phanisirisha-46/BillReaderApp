@@ -2,88 +2,93 @@
 
 ## 💡 Problem Statement
 
-Many people, especially senior citizens or those who are not comfortable reading printed bills, struggle to understand bill details clearly. This becomes a challenge in cases like electricity bills, shopping bills, hospital bills, etc.
+Many people — especially senior citizens and those who have trouble reading due to visibility issues — face difficulty understanding bill details clearly. This is common with electricity bills, hospital bills, shopping bills, and more.  
 
-The **Bill Reader App** aims to make it easy for anyone to scan a printed bill using their mobile camera or gallery image, extract the text (bill details), and read it aloud. Additionally, it saves scanned text to a cloud database for future reference.
+The **Bill Reader App** makes it easy for anyone to scan a bill (using the camera or selecting from the gallery), extract the text, and hear it read aloud in **Telugu**. Additionally, the app saves all bills to a cloud database so they can be reviewed anytime.
 
 ---
 
 ## 🎯 Features
 
-✅ Capture bill image using camera.  
-✅ Pick bill image from gallery.  
-✅ Use ML Kit OCR to extract text from image line by line (left to right) for accurate reading.  
-✅ Read out the extracted text using Text-to-Speech.  
-✅ Save bill text to Firebase Firestore.  
+✅ Capture bill image using **camera**.  
+✅ Pick bill image from **gallery**.  
+✅ Extract text from the image using **Google ML Kit OCR**.  
+✅ Read extracted text aloud in **Telugu** using Text-to-Speech (TTS).  
+✅ Save bills to **Firebase Firestore** with timestamp.  
+✅ View previously saved bills easily.  
+✅ **Increase or decrease text size** (zoom in/out) for better readability.  
+✅ Simple and friendly UI for all ages.
 
 ---
 
-## 🛠️ Tech Stack Used
+## 🛠️ Tech Stack
 
-* **Android (Java)** — Main app framework.
-* **Google ML Kit** — Text recognition (OCR) from images.
-* **Firebase Firestore** — Cloud database to store bill texts with timestamps.
-* **Android Text-to-Speech (TTS)** — Read extracted bill text aloud in English.
+- **Android (Java)** — Main app framework.
+- **Google ML Kit** — Text recognition (OCR) from images.
+- **Firebase Firestore** — Cloud database to securely store extracted bills.
+- **Android Text-to-Speech (TTS)** — Supports Telugu reading.
+- **Modern UI design** — Clean, accessible, and easy to navigate.
 
 ---
 
-## 🏗️ Architecture & Flow
+## 🏗️ How It Works
 
-1️⃣ User opens app and sees two options: **Open Camera** or **Open Gallery**.  
-2️⃣ User takes or selects an image.  
-3️⃣ App uses ML Kit to scan text line by line from left to right.  
-4️⃣ Extracted text is shown on screen and read aloud automatically in English.  
-5️⃣ Extracted text is saved to Firestore with timestamp.  
+1️⃣ User opens the app and chooses **Open Camera** or **Open Gallery**.  
+2️⃣ User captures or selects a bill image.  
+3️⃣ App extracts text line by line (left to right) for better accuracy.  
+4️⃣ Extracted text is displayed on the screen and read aloud in **Telugu**.  
+5️⃣ User can **zoom in or zoom out** to adjust text size.  
+6️⃣ Text is saved to Firestore with a timestamp.  
+7️⃣ User can view all saved bills later using the **Show Saved Bills** option.
 
 ---
 
 ## 🚀 Installation & Setup
 
-1️⃣ Clone this repo.  
+1️⃣ Clone this repository.  
 2️⃣ Open in **Android Studio**.  
-3️⃣ Add your Firebase configuration (`google-services.json`) to the app module.  
-4️⃣ Sync project and build.  
-5️⃣ Run on emulator or physical device.  
+3️⃣ Add your Firebase configuration file (`google-services.json`) inside the `app` module.  
+4️⃣ Sync and build the project.  
+5️⃣ Run on a physical device or emulator (camera and storage permissions needed).
 
 ---
 
 ## ⚙️ Requirements
 
-* Android Studio Arctic Fox or newer.
-* Minimum Android SDK 21 (Lollipop).
-* Firebase project setup (Firestore enabled).
-* Internet connection for Firestore saving.
+- Android Studio Arctic Fox or newer.
+- Minimum Android SDK 21 (Lollipop).
+- Firebase Firestore set up and enabled.
+- Internet connection for cloud saving and fetching.
 
 ---
-
 
 ## 📸 Screenshots
 
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/d6c7a221-54b8-47dc-b8c3-98923fb3bdf2" width="220"/>
-  <img src="https://github.com/user-attachments/assets/1feacd0b-3e45-4234-bf24-a9e2d66a6fa2" width="220"/>
-  <img src="https://github.com/user-attachments/assets/4b39d17f-facf-4b1d-ad31-d0a00a9cc7ac" width="220"/>
-  <img src="https://github.com/user-attachments/assets/a736ddad-393a-44fb-ba2d-7694036af644" width="220"/>
+  <img src="https://github.com/user-attachments/assets/6fe8d9e4-483d-4672-ab59-33c7af3b3900" width="220"/>
+  <img src="https://github.com/user-attachments/assets/9fbc8940-6647-4d4d-a83e-3b125898b002" width="220"/>
+  <img src="https://github.com/user-attachments/assets/69365b31-8694-4371-a3de-b1ee81270a97" width="220"/>
+  <img src="https://github.com/user-attachments/assets/e768ca8d-a764-41f5-ac3e-29734a78ffde" width="220"/>
+   <img src="https://github.com/user-attachments/assets/327576c9-074a-4755-ac84-1cc606a9fdd6" width="220"/>
+   <img src="https://github.com/user-attachments/assets/9a82c344-83c4-41ca-ac6f-612330c636d1" width="220"/>
+  <img src="https://github.com/user-attachments/assets/750e8821-81d9-418b-905e-d8145b6158cd" width="220"/>
   <img src="https://github.com/user-attachments/assets/d187fc34-6ac9-4e7c-95fc-4719c7b54cc4" />
 </p>
 
+---
 
+## 💬 Why This App?
 
-
-
-
-
-
-
-
-
-
-
+✨ Helps people who struggle to read printed bills.  
+✨ Supports **Telugu**, making it more helpful for local users.  
+✨ Adjustable text size to improve accessibility.  
+✨ Clean and user-friendly interface to encourage confidence.
 
 ---
 
-## 📬 Contact
+## 👩‍💻 Developer
 
-* Developer: Veeranki Phani Sirisha
-* Email: [veerankiphanisirisha@gmail.com](mailto:veerankiphanisirisha@gmail.com)
+- **Veeranki Phani Sirisha**
+- 📧 [veerankiphanisirisha@gmail.com](mailto:veerankiphanisirisha@gmail.com)
+
 
