@@ -7,15 +7,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.speech.tts.TextToSpeech;
-import android.view.LayoutInflater;
-import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -47,13 +46,13 @@ public class MainActivity extends AppCompatActivity {
 
     private String extractedText = "";
 
+    private float currentFontSize = 16f;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-
-        setupCustomActionBar();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -63,31 +62,39 @@ public class MainActivity extends AppCompatActivity {
 
         Button cameraButton = findViewById(R.id.btnCamera);
         Button galleryButton = findViewById(R.id.btnGallery);
+        Button showSavedButton = findViewById(R.id.btnShowSaved);
         imageViewPreview = findViewById(R.id.imageViewPreview);
         textViewResult = findViewById(R.id.textViewResult);
 
+        // Access font buttons from custom action bar include
+        LinearLayout customBar = findViewById(R.id.custom_action_bar);
+        Button btnIncreaseFont = customBar.findViewById(R.id.btnIncreaseFont);
+        Button btnDecreaseFont = customBar.findViewById(R.id.btnDecreaseFont);
+
+        btnIncreaseFont.setOnClickListener(v -> {
+            currentFontSize += 2f;
+            textViewResult.setTextSize(currentFontSize);
+        });
+
+        btnDecreaseFont.setOnClickListener(v -> {
+            if (currentFontSize > 10f) {
+                currentFontSize -= 2f;
+                textViewResult.setTextSize(currentFontSize);
+            }
+        });
+
         cameraButton.setOnClickListener(v -> openCamera());
         galleryButton.setOnClickListener(v -> openGallery());
+        showSavedButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SavedBillsActivity.class);
+            startActivity(intent);
+        });
 
         tts = new TextToSpeech(this, status -> {
             if (status != TextToSpeech.ERROR) {
-                tts.setLanguage(new Locale("te", "IN")); 
+                tts.setLanguage(new Locale("te", "IN"));
             }
         });
-    }
-
-    private void setupCustomActionBar() {
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayShowCustomEnabled(true);
-            actionBar.setDisplayShowTitleEnabled(false);
-
-            LayoutInflater inflater = LayoutInflater.from(this);
-            TextView title = (TextView) inflater.inflate(R.layout.custom_action_bar, null);
-
-            actionBar.setCustomView(title);
-            actionBar.setBackgroundDrawable(null); // Remove background
-        }
     }
 
     private void openCamera() {
@@ -148,30 +155,19 @@ public class MainActivity extends AppCompatActivity {
         recognizer.process(image)
                 .addOnSuccessListener(visionText -> {
                     StringBuilder extractedBuilder = new StringBuilder();
-
-                    // Iterate over blocks
                     for (com.google.mlkit.vision.text.Text.TextBlock block : visionText.getTextBlocks()) {
-                        // Iterate over lines
                         for (com.google.mlkit.vision.text.Text.Line line : block.getLines()) {
-                            // Iterate over elements in line (words, left to right)
-                            for (com.google.mlkit.vision.text.Text.Element element : line.getElements()) {
-                                extractedBuilder.append(element.getText()).append(" ");
-                            }
-                            extractedBuilder.append("\n");
+                            extractedBuilder.append(line.getText()).append("\n");
                         }
                     }
-
                     extractedText = extractedBuilder.toString().trim();
-
                     if (!extractedText.isEmpty()) {
                         showExtractedText(extractedText);
                     } else {
                         Toast.makeText(this, "No text found", Toast.LENGTH_SHORT).show();
                     }
                 })
-                .addOnFailureListener(e -> {
-                    Toast.makeText(this, "OCR Failed", Toast.LENGTH_SHORT).show();
-                });
+                .addOnFailureListener(e -> Toast.makeText(this, "OCR Failed", Toast.LENGTH_SHORT).show());
     }
 
     private void showExtractedText(String text) {
@@ -189,12 +185,10 @@ public class MainActivity extends AppCompatActivity {
         bill.put("timestamp", FieldValue.serverTimestamp());
 
         db.collection("bills").add(bill)
-                .addOnSuccessListener(documentReference -> {
-                    Toast.makeText(MainActivity.this, "Text saved to Firestore", Toast.LENGTH_SHORT).show();
-                })
-                .addOnFailureListener(e -> {
-                    Toast.makeText(MainActivity.this, "Failed to save text", Toast.LENGTH_SHORT).show();
-                });
+                .addOnSuccessListener(documentReference ->
+                        Toast.makeText(MainActivity.this, "Text saved to Firestore", Toast.LENGTH_SHORT).show())
+                .addOnFailureListener(e ->
+                        Toast.makeText(MainActivity.this, "Failed to save text", Toast.LENGTH_SHORT).show());
     }
 
     @Override

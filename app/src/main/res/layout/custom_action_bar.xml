@@ -1,10 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/action_bar_title"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center"
-    android:text="Bill Reader App"
-    android:textColor="#FF9800"
-    android:textSize="24sp"
-    android:textStyle="bold" />
+    android:background="#FF9800"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:paddingTop="60dp"
+    android:gravity="center_vertical">
+
+    <!-- ✅ Added paddingTop to move content down -->
+
+    <TextView
+        android:id="@+id/action_bar_title"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:paddingTop="80dp"/>
+
+    <Button
+        android:id="@+id/btnIncreaseFont"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#FF9800"
+        android:textSize="18sp"
+        android:layout_marginEnd="6dp"/>
+
+    <Button
+        android:id="@+id/btnDecreaseFont"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#FF9800"
+        android:textSize="18sp"/>
+</LinearLayout>

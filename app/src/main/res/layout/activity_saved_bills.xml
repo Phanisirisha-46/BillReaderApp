@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="35dp"
+    android:background="#FF9800">
+
+    <!-- Buttons container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btnIncreaseFont"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="+"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FF9800"
+            android:textSize="18sp"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btnDecreaseFont"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="-"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FF9800"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewBills"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

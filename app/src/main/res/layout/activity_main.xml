@@ -1,52 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
-    android:layout_marginTop="50dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFFFF"
-    android:padding="16dp">
+    android:background="#FF9800">
 
-    <ImageView
-        android:id="@+id/imageViewPreview"
+    <!-- Include the custom app bar -->
+    <include
+        android:id="@+id/custom_action_bar"
+        layout="@layout/custom_action_bar" />
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
-        android:background="#E0E0E0" />
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="0dp"> <!-- ✅ Moved up: removed extra padding -->
 
-    <TextView
-        android:id="@+id/textViewResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Result will appear here"
-        android:textColor="#000000"
-        android:padding="8dp"
-        android:background="#F0F0F0"
-        android:layout_marginBottom="16dp" />
+            <!-- Image container card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:padding="30dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnCamera"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FF9800"
-        android:text="Open Camera"
-        android:textColor="#FFFFFF"
-        android:layout_gravity="center"
-        android:layout_marginBottom="15dp" />
+                <ImageView
+                    android:id="@+id/imageViewPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="#E0E0E0"
+                    android:layout_marginBottom="12dp" />
 
-    <Button
-        android:id="@+id/btnGallery"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FF9800"
-        android:text="Open Gallery"
-        android:textColor="#FFFFFF"
-        android:layout_gravity="center" />
+                <TextView
+                    android:id="@+id/textViewResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Result will appear here"
+                    android:textColor="#212121"
+                    android:background="#FAFAFA"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:textSize="16sp"
+                    android:elevation="2dp" />
+            </LinearLayout>
 
+            <!-- Action buttons -->
+            <Button
+                android:id="@+id/btnCamera"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:text="Open Camera"
+                android:textColor="#FF9800"
+                android:layout_marginBottom="12dp"
+                android:padding="12dp"
+                android:layout_gravity="center_horizontal" />
 
+            <Button
+                android:id="@+id/btnGallery"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:text="Open Gallery"
+                android:textColor="#FF9800"
+                android:layout_marginBottom="12dp"
+                android:padding="12dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/btnShowSaved"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:text="Show Saved Bills"
+                android:textColor="#FF9800"
+                android:padding="12dp"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
